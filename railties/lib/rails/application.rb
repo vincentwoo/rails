@@ -452,8 +452,6 @@ module Rails
       super
       require "rails/tasks"
       task :environment do
-        ActiveSupport.on_load(:before_initialize) { config.eager_load = false }
-
         require_environment!
       end
     end
